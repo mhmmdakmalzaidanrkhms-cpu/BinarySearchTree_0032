@@ -16,3 +16,10 @@ public:
         leftchild = l;
         rightchild = r;
     }
+};
+
+class BinarySearchTree 
+{
+public:
+    Node* root;
+};
