@@ -88,4 +88,6 @@ public:
             cout << currentNode->info << " ";
             inorder(currentNode->rightchild);
         }
+    }
+
     
