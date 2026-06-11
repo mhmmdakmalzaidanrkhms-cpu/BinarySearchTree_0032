@@ -79,3 +79,13 @@ public:
             }
         }
     }
+
+    void inorder(Node* currentNode) 
+    {
+        if (currentNode != NULL) 
+        {
+            inorder(currentNode->leftchild);
+            cout << currentNode->info << " ";
+            inorder(currentNode->rightchild);
+        }
+    }
