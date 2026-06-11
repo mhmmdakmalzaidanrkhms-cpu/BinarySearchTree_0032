@@ -22,4 +22,39 @@ class BinarySearchTree
 {
 public:
     Node* root;
-};
+
+    binarySearchTree() 
+    {
+        root = NULL; // Initialize root to NULL
+    }
+
+    // insert a new node in the binary search tree
+    void insert(string element)
+    {
+        node* newNode = new Node(element, NULL, NULL); 
+
+        newNode->info = element;
+        newNode->leftchild = NULL;
+        newNode->rightchild = NULL;
+
+        Node* parent = NULL;
+        Node* current = root;
+
+        search(element, parent, currentNode);
+
+        if (parent == NULL) 
+        {
+            root = newNode;
+            return;
+        }
+
+        if (element < parent->info) 
+        {
+            parent->leftchild = newNode;
+        } 
+        else 
+        {
+            parent->rightchild = newNode;
+        }
+    }       
+};   
